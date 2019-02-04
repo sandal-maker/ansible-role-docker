@@ -52,6 +52,10 @@ Docker Compose installation options.
 
 A list of system users to be added to the `docker` group (so they can use Docker on the server).
 
+Optional - allow developers control over handlers
+Default is true
+    run_handlers: true
+
 ## Use with Ansible (and `docker` Python library)
 
 Many users of this role wish to also use Ansible to then _build_ Docker images and manage Docker containers on the server where Docker is installed. In this case, you can easily add in the `docker` Python library using the `geerlingguy.pip` role:

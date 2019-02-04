@@ -13,4 +13,6 @@
 - name: Reload systemd daemon if template is changed.
   systemd:
     daemon_reload: true
-  when: override_template is changed
+  when:
+    - override_template is changed
+    - run_handlers
